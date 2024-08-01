@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Login</title>
+       <!--<link rel="stylesheet" href="css/login.css">-->
+       <!--<link rel="stylesheet" href="../css/bulma.min.css">-->
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        </style>
+    </head>
+<body>
+    <div class="wrapper">
+        <form name="Form" action="login.php" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Nombre" id="Nombre" name="Nombre" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Cedula" id="Cedula" name="Cedula" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>don't have an account? <a href="./registro/registro.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+                

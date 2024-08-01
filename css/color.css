@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(27, 43, 48);
+}
+
+/* Para una imagen de fondo */
+body {
+    background-image: url('');
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Para centrar la imagen */
+}
