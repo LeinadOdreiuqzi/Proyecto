@@ -24,7 +24,9 @@ if (isset($_POST["Cedula"]) && isset($_POST["Nombre"])) {
         header("Location: $url");
         exit();
     } else {
-        echo "La cédula o el nombre no existen en la base de datos.";
+        header("Location: login.html");
+        //echo '<script>window.alert=("Contraseña o correo incorrectos")</script>';
+        //echo "La cédula o el nombre no existen en la base de datos.";
     }
 } else {
     echo "Por favor, complete los campos de cédula y nombre.";

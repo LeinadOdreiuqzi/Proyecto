@@ -1,3 +1,6 @@
+<?php
+include("sesion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,25 +11,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .form-container {
-            max-width: 600px;
             margin-bottom: 20px;
         }
+
         .table-container {
-            max-width: 600px;
+            
         }
+
         .search-container {
             margin-bottom: 20px;
-            text-align: center; /* Centra la barra de búsqueda */
+            text-align: center;
+            /* Centra la barra de búsqueda */
         }
+
         .search-input {
-            max-width: 300px; /* Limita el tamaño de la barra de búsqueda */
+            /* Limita el tamaño de la barra de búsqueda */
         }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="pag_principal.php">Dashboard</a>
@@ -59,16 +65,9 @@
     <h1 class="text-center p-3">Inventario</h1>
     <div class="container-fluid">
         <!-- Filtro de búsqueda -->
-        <div class="row search-container">
-            <div class="col-12">
-                <label for="search" class="form-label">Buscar</label>
-                <input type="text" class="form-control form-control-sm search-input" id="search" placeholder="Buscar...">
-            </div>
-        </div>
-
         <div class="row">
             <!-- Formulario de Inventario -->
-            <form class="form-container p-3 col-12 col-md-6" method="POST" action="inventario.php">
+            <form class="form-container p-3 col-12 col-md-4" method="POST" action="inventario.php">
                 <h3 class="text-center text-secondary">Agregar Producto</h3>
                 <div class="mb-2">
                     <label for="descripcion" class="form-label">Descripción</label>
@@ -98,7 +97,13 @@
             </form>
 
             <!-- Tabla de Inventario -->
-            <div class="table-container col-12 col-md-6">
+            <div class="table-container col-12 col-md-8">
+                <div class="row search-container">
+                    <div class="col-12">
+                        <label for="search" class="form-label">Buscar</label>
+                        <input type="text" class="form-control form-control-sm search-input" id="search" placeholder="Buscar...">
+                    </div>
+                </div>
                 <table class="table table-sm">
                     <thead class="bg-info">
                         <tr>
@@ -113,7 +118,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include("../conexcion.php");
+                        //include("../conexcion.php");
 
                         $conectar = conn();
                         if (!$conectar) {

@@ -1,3 +1,6 @@
+<?php
+include("sesion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +95,7 @@
                     </thead>
                     <tbody id="table-body">
                         <?php
-                        include("../conexcion.php");
+                        // include("../conexcion.php");
 
                         $conectar = conn();
                         if (!$conectar) {

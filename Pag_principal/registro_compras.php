@@ -1,3 +1,6 @@
+<?php
+include("sesion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +15,6 @@
             gap: 20px; /* Añadir espacio entre formulario y tabla */
         }
         .form-container, .table-container {
-            flex: 1;
         }
     </style>
 </head>
@@ -50,7 +52,7 @@
     </nav>
     
     <div class="container-fluid mt-4">
-        <div class="content-container">
+        <div class="row">
             <!-- Formulario de Registro de Compras -->
             <div class="form-container col-md-4">
                 <form class="p-3" method="POST" action="registro_compras.php">
@@ -101,7 +103,7 @@
                     </thead>
                     <tbody id="table-body">
                         <?php
-                        include("../conexcion.php");
+                        //include("../conexcion.php");
 
                         $conectar = conn();
                         if (!$conectar) {

@@ -1,13 +1,5 @@
 <?php
-session_start();
-include("../conexcion.php");
-// Verificar si la sesión está iniciada
-if (!isset($_SESSION['sesion_email'])) {
-  // Si no hay sesión activa, redirigir al login
-  header('Location: ../login.html');
-  exit();
-}
-
+include("sesion.php");
 // Obtener el nombre de usuario de la sesión
 $nombre = $_SESSION['sesion_email'];
 
@@ -41,11 +33,9 @@ $row = mysqli_fetch_array($resul);
     }
 
     #footer1 {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 30px;
-      padding-bottom: auto;
+      position: auto;
+      bottom: 0px;
+      padding-bottom: 0px;
     }
   </style>
 </head>
@@ -227,15 +217,15 @@ $row = mysqli_fetch_array($resul);
       <!-- /.control-sidebar -->
 
       <!-- Main Footer -->
-      <footer class="main-footer" id="footer1">
-        <!-- To the right -->
-        <div class="float-right d-none d-sm-inline" >
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-      </footer>
     </div>
+    <footer class="main-footer" id="footer1">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Anything you want
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->

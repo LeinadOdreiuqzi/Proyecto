@@ -12,7 +12,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: url('castillo.png') no-repeat;
-  background-position: center;
+  background-position: auto;
 }
 .wrapper {
   width: 420px;
