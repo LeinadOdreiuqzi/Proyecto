@@ -140,27 +140,34 @@ $row = mysqli_fetch_array($resul);
                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
               <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="nav-icon fas fa-users"></i>
                 <p>
-                  Starter Pages
+                  Ventas/Compras
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active">
+                  <a href="registro_ventas.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Active Page</p>
+                    <p>Registro de ventas</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="registro_compras.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Inactive Page</p>
+                    <p>Registro de compras</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="inventario.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Inventario</p>
                   </a>
                 </li>
               </ul>
             </li>
+
             <li class="nav-item">
               <a href="<?php echo $URL; ?>/app/controladores/login/cerrar_sesion.php" class="btn btn-danger">Cerrar sesión</a>
             </li>
